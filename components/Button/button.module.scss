@@ -1,0 +1,49 @@
+$button-corner-radius: 5px;
+$button-corner-radius-lrg: 40px;
+
+
+.button {
+    color: white;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #353131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    appearance: none;
+    border: none;
+    font-size: 30px;
+    transition: font-size 200ms ease-in;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+
+    &.topL {
+        border-top-left-radius: $button-corner-radius;
+    }
+
+    &.topR {
+        border-top-right-radius: $button-corner-radius;
+    }
+
+    &.btmL {
+        border-bottom-left-radius: $button-corner-radius-lrg;
+    }
+
+    &.btmR {
+        border-bottom-right-radius: $button-corner-radius-lrg;
+    }
+
+    &:hover {
+        font-size: 35px;
+    }
+
+    &:active {
+        background-color: rgba($color: #000000, $alpha: 0.8)
+    }
+
+    &.reversed {
+        background-color: #8b8888;
+        color: black;
+    }
+}

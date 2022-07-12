@@ -1,0 +1,98 @@
+@import '../../stylevariables/_variables.scss';
+
+.calculatorContainer {
+    border-radius: $corner-radius-lrg;
+    width: 320px;
+    height: 480px;
+    background: rgb(192, 192, 192);
+    background: linear-gradient(180deg, rgba(192, 192, 192, 1) 0%, rgba(238, 238, 238, 1) 100%);
+    padding: 4px;
+
+
+    &__inner {
+        background-color: lightgray;
+        border-radius: $corner-radius-lrg;
+        height: 100%;
+        width: 100%;
+        border: 1px solid darkgray;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+
+        &__display {
+            width: 100%;
+            height: 100px;
+            border-radius: $corner-radius-med $corner-radius-med $corner-radius-sml $corner-radius-sml;
+            background-color: black;
+
+            input {
+                width: 100%;
+                height: 100%;
+                border-radius: $corner-radius-med $corner-radius-med $corner-radius-sml $corner-radius-sml;
+                border: none;
+                text-align: right;
+                font-size: 44px;
+                background-color: transparent;
+                color: white;
+                padding: 0px 10px;
+                font-family: 'Orbitron', sans-serif;
+                font-weight: 400;
+            }
+        }
+
+        &__operations {
+            width: 100%;
+            height: 88px;
+            background-color: black;
+            border-radius: $corner-radius-sml;
+            position: relative;
+            border: 1px solid white;
+            border-left: 0;
+            border-right: 0;
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                height: 100%;
+                color: white;
+                font-size: 22px;
+                padding: 0px 10px;
+                border: none;
+                font-family: 'Orbitron', sans-serif;
+                font-weight: 400;
+            }
+
+            button {
+                border: 1px solid white;
+                font-size: 12px;
+                text-align: center;
+                cursor: pointer;
+                color: white;
+                position: absolute;
+                right: 2px;
+                top: 2px;
+                background: none;
+                width: 44px;
+            }
+        }
+
+        &__keypad__container {
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 0px $corner-radius-med $corner-radius-med;
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+
+            grid-template-areas:
+                "seven eight nine divide"
+                "four five six multiply"
+                "one two three subtract"
+                "zero decimal equals add"
+            ;
+            gap: 1px;
+            justify-items: center;
+        }
+    }
+}

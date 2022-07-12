@@ -1,21 +1,14 @@
-# Next.js + Jest
+# Equal Experts Cool-Calulator App
 
-This example shows how to configure Jest to work with Next.js.
+Version: 5b8d0fd276b6d288905ed2f63a934e057e8feca2
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+This is a simple calculator using Jest and RTL with Next.js.
 
 ## How to Use
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
 ```bash
-npx create-next-app --example with-jest with-jest-app
-# or
-yarn create next-app --example with-jest with-jest-app
-# or
-pnpm create next-app --example with-jest with-jest-app
+npm run build
+npm run start
 ```
 
 ## Run Jest Tests
